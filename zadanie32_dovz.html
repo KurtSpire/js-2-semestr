@@ -1,0 +1,28 @@
+<html> 
+     <head> 
+            <script type="text/javascript"> 
+            function pociag(waga_dov,pojemnosc_dov,dlugosc_dov,szerokosc_dov)
+				{ 
+				this.waga=waga_dov; 
+				this.pojemnosc=pojemnosc_dov; 
+				this.dlugosc=dlugosc_dov;  
+				this.szerokosc=szerokosc_dov;
+				}
+            pociag.prototype.obiekt_pokaz_dovzhyk = function () 
+				{ 
+				alert(this.waga + 't ' + this.pojemnosc + 'm^3 ' + this.dlugosc + 'm ' + this.szerokosc + 'm '); 
+				}; 
+			var pociag1 = new pociag("1500", "20000", "200", "2"); 
+			var pociag2 = new pociag('2000', '25000', '150', '1,5'); 
+			pociag1.obiekt_pokaz_dovzhyk(); 
+			pociag2.obiekt_pokaz_dovzhyk(); 
+            document.write("Dostęp do właściwości"+"<br>"); 
+			document.write("Pociąg pierwszy: "+"waga = "+pociag1.waga+" t, pojemność = "+pociag1.pojemnosc+" m^3, dlugość = "+pociag1.dlugosc+" m, szerokość = "+pociag1.szerokosc+" m<br>"); 
+			document.write("Pociąg drugi: "+"waga = "+pociag2.waga+" t, pojemność = "+pociag2.pojemnosc+" m^3, dlugość = "+pociag2.dlugosc+" m, szerokość = "+pociag2.szerokosc+" m<br>"); 
+            </script> 
+     </head> 
+	<body> 
+     <br> 
+     programowanie obiektowe   
+	</body> 
+</html> 

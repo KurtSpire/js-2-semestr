@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <script language="JavaScript">
+function okno_zamknij_Dovzhyk()  
+{ 
+window.close() 
+} 
+          </script>
+</head>
+<body>
+
+<ol type="1">
+	<!--1-->
+	<h1><li>W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z przykładami)?</h1>
+	<u>Właściwość danego obiektu można określić (wpisać daną do pola odpowiedzialnego za właściwość)</u><br>
+	<b>Sposób 1</b><br>
+	Używając zapisu postaci:<br>
+	a)<br>
+	<b>nazwa_obiektu.nazwa_właściwości="tekst";</b> -> dla właściwości typu tekstowego<br>
+	np.<br>
+	auto.marka="Opel Omega";<br>
+	b)<br>
+	<b>nazwa_obiektu.nazwa_właściwości=liczba;</b> -> dla właściwości typu liczbowego<br>
+	np.<br>
+	auto.rok=1996;<br>
+	auto.cena=25000;<br>
+	<br>
+	<b>Sposób 2</b><br>
+	używając zapisu postaci:<br>
+	<b>nazwa_obiektu[nazwa_właściwości];</b><br>
+	np. auto[cena]=25000;<br>
+	</li>
+	<!--2-->
+	<h1><li>W jaki sposób można odwołać się do pól (właściwości) i metod?</h1>
+	<u>Odwołanie do pól (właściwości) i metod.<br></u>
+	Do <u>właściwości i metod</u> można się odwołać podobnie jak do zwykłych zmiennych i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami (np. zmienną, która przechowuje dany obiekt), i <u>kropkę</u>.<br><br>
+	np. console.log(samochod1.kolor);  wyświetla kolor obiektu samochod
+	</li>
+	<!--3-->
+	<h1><li>Wymień cechy charakterystyczne konstruktora. </h1> 
+		<u>Cechy charakterystyczne konstruktora:</u>
+		<ul type=disc>
+		<li>jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu,</li>
+		<li>nazywa się tak samo jak klasa,</li>
+		<li>nie zwraca żadnej wartości ,</li>
+		<li>może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora <b>new.</b> </li>
+		</ul>
+	</li>
+	<!--4-->
+	<h1><li>Konstruowanie obiektu na podstawie przykładu->obiekt ma trzy pola oraz jedną metodę.</h1>
+	<textarea style="width:673px; height:170px;">
+var osoba_1 =
+{
+nazwisko : ‘Kowalski’,
+imie :’Jan’,
+zawod :’piekarz’,
+wyświetl :function ()
+	{
+		Document.write(this.nazwisko + ‘ ‘ + this.imie)
+	}
+}
+	</textarea>
+	</li>
+	<!--5-->
+	<h1><li> Znaczenie słowa <b>this</b>. Jak oddzielamy pola oraz metody?</h1>
+	Słowo kluczowe <b>this</b> -> pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.<br>
+	Metody i pola muszą być odzielne przecinkami w obrębie jednego obiektu.
+	</li>
+	<!--6-->
+	<h1><li>Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+	Zostanie utworzony <u>konstruktor</u> o nazwie <b>klient</b> z <u>właściwościami</u> <b>nazwisko, imie, zawod</b> oraz <u>metodą</u> <b>wypisz()</b>. Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo kluczowe <b>this</b> odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do odpowiedniego pola tego obiektu.
+	<br>
+	<textarea style="width:673px; height:170px;">
+function klient(nazwisko_k,imie_k,zawod_k)
+{
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+wypisz = function ()
+ {
+ alert(this.nazwisko + ' ' + this.imie)
+ }
+}
+	</textarea>
+	</li>
+	<!--7-->
+	<h1><li> Znaczenie słowa kluczowego <b>New</b> wraz z przykładem.</h1>
+	Do utworzenia <u><b>nowego obiektu</b></u> na podstawie konstruktora stosowane jest <b>słowo kluczowe new</b>.<br><br>
+	Przykład<br>
+	var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');<br>
+	var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');<br><br>
+	Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.
+	</li>
+	<!--8-->
+	<h1><li>Znaczenie słowa kluczowego <b>prototype</b> wraz z przykładem i opisem <b>(szczególnie ważny tekst pogrubiony)</b>.</h1>
+	Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości <b>prototype</b>.<br><br>
+	<u>Przykład</u><br><br>
+	<textarea style="width:673px; height:195px;">
+function klient()
+{
+this.nazwisko='Bielski';
+this.imie='Paweł';
+}
+klient.prototype.pisz_dane = function ()
+ {
+ document.write(this.nazwisko + ' ' + this.imie)
+ }
+klient.prototype.zawod = 'kierowca';
+var osoba1 = new klient();
+osoba1.pisz_dane();
+	</textarea>
+	</li>
+</ol>
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Dovzhyk()"/> 
+</body>
+</html>
+<!--Dovzhyk Dmytro-->
