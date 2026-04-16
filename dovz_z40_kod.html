@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<textarea rows=27 cols=100>
+<!DOCTYPE html> 
+<html lang="pl-PL"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Z40 Dovzhyk</title> 
+</head 
+  <body>
+	<div style="color:red;font-size:50px;"> 
+		<script language="JavaScript"> 
+		var x=prompt("podaj argument x=",""); 
+        var x_dovzhyk=parseFloat(x);
+		document.write("wykonał Dmytro Dovzhyk"+"<br>"); 
+		document.write("czytany argument x="+x_dovzhyk.toFixed(2)+"<br>")
+		function f_dov(x_dovzhyk) 
+		{ 
+			if(x_dovzhyk>=2) {return 9;} 
+			if((x_dovzhyk<0) && (x_dovzhyk>-2)) {return (x_dovzhyk+1)**2;} 
+			if(x_dovzhyk>=2) {return x_dovzhyk**3+1;} 
+			if(x_dovzhyk<-2) {return 1;} 
+        } 
+
+		document.write("f("+x_dovzhyk.toFixed(2)+")="+f_dov(x_dovzhyk).toFixed(2)+"<br>");
+		</script>
+	</div> 
+   </body> 
+ </html> 
+<!--  Dovzhyk Z40_JS  -->
+		</textarea>
+	</body>
+</html>
