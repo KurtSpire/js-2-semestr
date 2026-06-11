@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<title>Przykład użycia pętli</title>
+	</head>
+	<body> 
+		<script language="JavaScript"> 
+			var ile_razy_dov=parseFloat(prompt('Ile razy powtórzyć?',''));
+			var inicjaly_dov=prompt('Podaj inicjaly:','')
+			for (var i_d=1; i_d<=ile_razy_dov;i_d++) 
+			{ 
+				for (var k_d=1; k_d<=i_d;k_d++) 
+				{ 
+					document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");   
+				} 
+			document.write(i_d+"_"+inicjaly_dov+"_"+i_d+"<br>"); 
+			}
+		</script> 
+	</body> 
+</html> 

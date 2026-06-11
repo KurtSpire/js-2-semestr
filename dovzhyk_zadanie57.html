@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body> 
+		<script language="JavaScript"> 
+			do{
+			var l1_t_dov=parseFloat(prompt('Podaj 1 liczbę',''));
+			if(l1_t_dov<20||l1_t_dov>60){alert("1 liczba należy do przedziału <20,60>")}
+			}while(l1_t_dov<20||l1_t_dov>60)
+			
+			
+			do{
+			var l2_t_dov=parseFloat(prompt('Podaj 2 liczbę',''));
+			if(l2_t_dov<20||l2_t_dov>60){alert("2 liczba należy do przedziału <20,60>")}
+			}while(l2_t_dov<20||l2_t_dov>60)
+			
+			var pocz_dov=parseFloat(prompt('Podaj początkową wartość wielkości tekstu',''));
+			var tekst_dov=prompt('Podaj tekst','');
+			
+			
+			
+			if(l1_t_dov<l2_t_dov)
+			{
+				do{
+					document.write("<p style=\"font-size:"+pocz_dov+"px; color: black;\">"+tekst_dov+"<br></p>");
+					pocz_dov=pocz_dov+5;
+				}while(pocz_dov<100)
+			}
+			
+			if(l2_t_dov<l1_t_dov)
+			{
+				do{
+					document.write("<p style=\"font-size:"+pocz_dov+"px; color: black;\"><br>"+tekst_dov+"<br></p>");
+					pocz_dov=pocz_dov-5;
+				}while(pocz_dov>0)
+			}
+			if(l2_t_dov==l1_t_dov){document.write("<p style=\"font-size:"+pocz_dov+"px; color: black;\"><br>"+tekst_dov+"<br></p>");}
+		</script> 
+	</body> 
+</html> 

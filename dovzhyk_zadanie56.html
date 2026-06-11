@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body> 
+		<script language="JavaScript"> 
+			var a_dov=prompt('Podaj nazwisko',''); //kolumna
+			a_dov=a_dov.length%4+5;
+			var b_dov=prompt('Podaj imie',''); //wiersz
+			b_dov=b_dov.length%6+20;
+			
+			for(i=0;i<b_dov;i++)
+			{
+				document.write("*");
+			}
+			for(j=0;j<a_dov-2;j++)
+			{
+				document.write("<br>*")
+				for(k=0;k<(b_dov-2)*2;k++)
+				{
+					document.write("&nbsp;");
+				}
+				document.write("*<br>")
+			}
+			for(i=0;i<b_dov;i++)
+			{
+				document.write("*");
+			}
+		</script> 
+	</body> 
+</html> 
